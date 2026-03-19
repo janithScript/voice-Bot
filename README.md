@@ -71,7 +71,7 @@ Make sure you have installed:
 * Composer
 * Python >= 3.8
 * MySQL
-* Node.js (optional for frontend assets)
+* Node.js
 
 ---
 
@@ -96,8 +96,6 @@ cd voicebot-python
 pip install -r requirements.txt
 ```
 
-###  Run Flask Server
-
 ```bash
 python app.py
 ```
@@ -113,20 +111,13 @@ python app.py
 ```bash
 cd laravel-backend
 ```
-
-### Install Dependencies
-
 ```bash
 composer install
 ```
 
-### Generate Application Key
-
 ```bash
 php artisan key:generate
 ```
-
-### Configure Environment
 
 Update your `.env` file with database credentials:
 
@@ -135,18 +126,21 @@ DB_DATABASE=clinic_voicebot
 DB_USERNAME=your_username
 DB_PASSWORD=your_password
 ```
+```bash
+# Then seed with a doctor (run in tinker):
+php artisan tinker
+>>> DB::table('doctors')->insert([
+   'name' => 'Dr. Sarah Johnson',
+  'specialization' => 'General Practitioner',
+   'available_days' => 'Mon,Tue,Wed,Thu,Fri',
+   'created_at' => now(), 'updated_at' => now()
+ ]);
+>>> exit
 
-### Run Migrations & Seed Data
-
+```
 ```bash
 php artisan migrate --seed
 ```
-
-> This command will:
->
-> * Run all database migrations
-> * Populate database with sample data (doctors, etc.)
-
 ###  Start Laravel Server
 
 ```bash
