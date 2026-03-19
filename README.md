@@ -24,43 +24,6 @@ A full-stack Clinic Appointment Booking System powered by **Laravel (Backend)** 
 * RESTful API for VoiceBot integration
 * Secure authentication-ready structure
 
----
-
-##  System Architecture
-
-```
-User (Voice Input)
-        ↓
-Python Flask VoiceBot
-        ↓ (API Calls)
-Laravel Backend (REST API)
-        ↓
-MySQL Database
-```
-
----
-
-##  Project Structure
-
-```
-clinic-voicebot/
-│
-├── voicebot-python/      # Flask VoiceBot service
-│   ├── app.py
-│   ├── requirements.txt
-│   └── ...
-│
-├── laravel-backend/      # Laravel application
-│   ├── app/
-│   ├── routes/
-│   ├── database/
-│   └── ...
-│
-└── README.md
-```
-
----
-
 ##  Getting Started
 
 ###  Prerequisites
