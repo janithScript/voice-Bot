@@ -1,7 +1,7 @@
 
 <img width="949" height="439" alt="home" src="https://github.com/user-attachments/assets/345c4efa-d942-4774-b7db-8628bd7cc729" />
 
-# 🏥 Clinic VoiceBot
+#  Clinic VoiceBot
 
 A full-stack Clinic Appointment Booking System powered by **Laravel (Backend)** and a **Python Flask VoiceBot Service**. This project enables users to book appointments using voice interactions and manage clinic operations efficiently.
 
